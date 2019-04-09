@@ -1,0 +1,6 @@
+import sys
+sys.path.insert(0, r'D:\Python_Lesson_Learn\Python_Lesson_Learn\Flask_Blog\Lesson6_UserAuth')
+from flaskblog import db
+from flaskblog.models import User,Post
+db.create_all()
+User.query.all()
