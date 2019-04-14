@@ -20,11 +20,11 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_SERVER'] = 'smtp.163.com'
+app.config['MAIL_PORT'] = 25
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'hduewenliu'
-app.config['MAIL_PASSWORD'] = 'hduewen1122!'
+app.config['MAIL_PASSWORD'] = 'ewenliu123!'
 mail = Mail(app)
 
 
