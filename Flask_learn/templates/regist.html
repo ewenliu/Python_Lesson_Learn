@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}REGIST{% endblock %}
+{% block title %}Registration{% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/regist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_regist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 {% endblock %}
 
 {% block main %}
@@ -27,7 +28,7 @@
                 name="password_confirm">
             </div>
             <div class="form-group">
-                <button class="btn-primary btn-block">Submit</button>
+                <button class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>
