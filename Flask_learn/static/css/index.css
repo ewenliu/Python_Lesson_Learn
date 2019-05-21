@@ -3,7 +3,7 @@ ul{
     padding-left: 0;
 }
 
-ul li{
+.content-li{
     border-bottom: 1px solid #eee;
     overflow: hidden;
     padding: 15px 0;

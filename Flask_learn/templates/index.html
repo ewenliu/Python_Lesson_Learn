@@ -8,32 +8,20 @@
 
 {% block main %}
     <ul>
-        <li>
-            <div class="avatar-group">
-                <img src="{{ url_for('static', filename='images/sub_blog.png') }}" alt="" class="avatar">
-            </div>
-            <div class="question-group">
-                <p class="question-title"><a href="#">测试标题first article title</a></p>
-                <p class="question-content">This is content</p>
-                <div class="question-info">
-                    <span class="question-author">ewen</span>
-                    <span class="question-time">2019/05/21</span>
+        {% for question in questions %}
+            <li class="content-li">
+                <div class="avatar-group">
+                    <img src="{{ url_for('static', filename='images/sub_blog.png') }}" alt="" class="avatar">
                 </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="avatar-group">
-                <img src="{{ url_for('static', filename='images/sub_blog.png') }}" alt="" class="avatar">
-            </div>
-            <div class="question-group">
-                <p class="question-title"><a href="#">测试标题first article title</a></p>
-                <p class="question-content">This is content</p>
-                <div class="question-info">
-                    <span class="question-author">ewen</span>
-                    <span class="question-time">2019/05/21</span>
+                <div class="question-group">
+                    <p class="question-title"><a href="#">{{ question.title }}</a></p>
+                    <p class="question-content">{{ question.content }}</p>
+                    <div class="question-info">
+                        <span class="question-author">{{ question.author.username }}</span>
+                        <span class="question-time">{{ question.create_time }}</span>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock %}
