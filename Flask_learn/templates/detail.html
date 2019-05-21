@@ -25,9 +25,16 @@
             <button class="btn btn-primary">Submit</button>
         </div>
     </form>
-    <ul>
+    <ul class="answer-list">
         {% for answer in question.answers %}
-            <li>{{ answer.content }}</li>
+            <li>
+                <div class="user-info">
+                    <img src="{{ url_for('static', filename='images/comment.png') }}" class="avatar">
+                    <span class="username">{{ answer.author.username }}</span>
+                    <span class="creat-time">{{ answer.create_time }}</span>
+                </div>
+                <p class="answer-content">{{ answer.content }}</p>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
