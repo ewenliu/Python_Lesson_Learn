@@ -4,24 +4,63 @@
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
 {% endblock %}
 
 {% block main %}
-    <ul>
+    <!--<ul>-->
+        <!--{% for question in questions %}-->
+            <!--<li class="content-li">-->
+                <!--<div class="avatar-group">-->
+                    <!--<img src="{{ url_for('static', filename='images/sub_blog.png') }}" alt="" class="avatar">-->
+                <!--</div>-->
+                <!--<div class="question-group">-->
+                    <!--<h2 class="question-title"><a href="{{ url_for('detail', question_id=question.id) }}">{{ question.title }}</a></h2>-->
+                    <!--<p class="question-content">{{ question.content }}</p>-->
+                    <!--<div class="question-info">-->
+                        <!--<span class="question-author">{{ question.author.username }}</span>-->
+                        <!--<span class="question-time">{{ question.create_time }}</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!---->
+        <!--{% endfor %}-->
+    <!--</ul>-->
+<main role="main" class="container">
+    <div class="col-md-8">
         {% for question in questions %}
-            <li class="content-li">
-                <div class="avatar-group">
-                    <img src="{{ url_for('static', filename='images/sub_blog.png') }}" alt="" class="avatar">
-                </div>
-                <div class="question-group">
-                    <p class="question-title"><a href="{{ url_for('detail', question_id=question.id) }}">{{ question.title }}</a></p>
-                    <p class="question-content">{{ question.content }}</p>
-                    <div class="question-info">
-                        <span class="question-author">{{ question.author.username }}</span>
-                        <span class="question-time">{{ question.create_time }}</span>
+            <!--<article class="media content-section">-->
+
+                <article class="media content-section">
+                    <div class="avatar-group">
+                        <!--<img class="avatar" src="{{ url_for('static', filename='images/sub_blog.png') }}">-->
+                        <img class="avatar" src="{{ url_for('static', filename='images/samo.png') }}">
                     </div>
-                </div>
-            </li>
+                    <div class="media-body">
+                        <div class="article-metadata">
+                          <a class="mr-2" href="#">{{ question.author.username }}</a>
+                          <small class="text-muted">{{ question.create_time }}</small>
+                        </div>
+                        <div class="media-article">
+                            <h2><a class="article-title" href="{{ url_for('detail', question_id=question.id) }}">{{ question.title }}</a></h2>
+                            <p class="article-content">{{ question.content }}</p>
+                        </div>
+                    </div>
+                </article>
         {% endfor %}
-    </ul>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Our Sidebar</h3>
+                <p class='text-muted'>You can put any information here you'd like.
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-light">Latest Posts</li>
+                        <li class="list-group-item list-group-item-light">Announcements</li>
+                        <li class="list-group-item list-group-item-light">Calendars</li>
+                        <li class="list-group-item list-group-item-light">etc</li>
+                    </ul>
+                </p>
+        </div>
+    </div>
+</main>
 {% endblock %}
