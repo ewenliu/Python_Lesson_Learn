@@ -4,3 +4,7 @@
 # @Email   : ewen.liu@outlook.com
 # @File    : exts.py
 # @Documents: extra file to init db to avoid the import clash
+
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
