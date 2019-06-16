@@ -9,6 +9,7 @@ import os
 
 DEBUG = True
 port = 5000
+# PERMANENT_SESSION_LIFETIME =
 
 SECRET_KEY = os.urandom(24)
 
