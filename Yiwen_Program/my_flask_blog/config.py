@@ -9,7 +9,6 @@ import os
 
 DEBUG = True
 port = 5000
-# PERMANENT_SESSION_LIFETIME =
 
 SECRET_KEY = os.urandom(24)
 
@@ -25,3 +24,5 @@ SQLALCHEMY_DATABASE_URI = '{}+{}://{}:{}@{}:{}/{}?charset=utf8'.format(DB_DIALEC
                                                                        DB_DRIVER, DB_USERNAME, DB_PASSWORD, DB_HOST,
                                                                        DB_PORT, DB_DATABASE)
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+CMS_USER_ID = 'asdfafasdf'
