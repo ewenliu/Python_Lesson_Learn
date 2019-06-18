@@ -13,15 +13,18 @@ from flask import (
     session,
     redirect,
     url_for,
-    g,
-    jsonify
+    g
 )
 from .forms import LoginForm, ResetpwdForm
 from .models import CMSUser
 from .decorators import login_required
 import config
-from exts import db
+from exts import db, mail
+from flask_mail import Message
 from utils import restful
+import string
+import random
+
 
 bp = Blueprint('cms', __name__, url_prefix='/cms')
 
@@ -43,6 +46,32 @@ def logout():
 @login_required
 def profile():
     return render_template('cms/cms_profile.html')
+
+
+@bp.route('/email_captcha/')
+def email_captcha():
+    # /email_captcha/?email=xxx@xxx.com
+    email = request.args.get('email')
+    if not email:
+        return restful.params_error('请传递邮箱参数！')
+    # 给邮箱发送邮件
+    source = list(string.ascii_letters)
+    source.extend(map(lambda x:str(x), range(0, 10)))
+    captcha = ''.join(random.sample(source, 6))
+
+    message = Message('CMS password forget', recipients=[email], body='You captcha is : %s'%captcha)
+    try:
+        mail.send(message)
+    except:
+        return restful.server_error()
+    return restful.success()
+
+
+@bp.route('/email/')
+def send_mail():
+    message = Message('刘逸文是傻逼吗', recipients=['xuefang.zhu@nokia.com'], body='确定过眼神，是傻逼本人')
+    mail.send(message)
+
 
 
 class LoginView(views.MethodView):

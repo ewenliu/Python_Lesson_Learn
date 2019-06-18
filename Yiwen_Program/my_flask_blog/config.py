@@ -26,3 +26,15 @@ SQLALCHEMY_DATABASE_URI = '{}+{}://{}:{}@{}:{}/{}?charset=utf8'.format(DB_DIALEC
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 CMS_USER_ID = 'asdfafasdf'
+
+#发送者邮箱的服务器地址
+MAIL_SERVER = 'smtp.163.com'
+MAIL_PORT = '465'
+# MAIL_USE_TLS = True
+MAIL_USE_SSL = True
+MAIL_USERNAME = 'hduewenliu@163.com'
+MAIL_PASSWORD = 'hduewen1122'
+MAIL_DEFAULT_SENDER = 'hduewenliu@163.com'
+
+
+

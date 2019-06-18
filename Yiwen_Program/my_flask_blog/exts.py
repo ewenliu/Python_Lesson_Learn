@@ -6,5 +6,8 @@
 # @Documents: extra file to init db to avoid the import clash
 
 from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail
+
 
 db = SQLAlchemy()
+mail = Mail()
