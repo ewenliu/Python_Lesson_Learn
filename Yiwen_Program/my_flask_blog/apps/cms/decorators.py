@@ -9,6 +9,7 @@ from flask import session, redirect, url_for
 from functools import wraps
 import config
 
+
 def login_required(func):
 
     @wraps(func)

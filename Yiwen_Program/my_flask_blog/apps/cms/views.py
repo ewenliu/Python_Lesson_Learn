@@ -5,7 +5,7 @@
 # @File    : views.py
 # @Documents:
 
-from flask import Blueprint, views, render_template, request, session, redirect, url_for, g
+from flask import Blueprint, views, render_template, request, session, redirect, url_for
 from .forms import LoginForm
 from .models import CMSUser
 from .decorators import login_required
