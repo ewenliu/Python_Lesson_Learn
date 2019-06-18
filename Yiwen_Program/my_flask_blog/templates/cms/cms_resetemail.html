@@ -1,0 +1,29 @@
+{% extends 'cms/cms_base.html' %}
+{% from "common/_macros.html" import static %}
+
+{% block title -%}
+    Change Email
+{%- endblock %}
+
+{% block page_title -%}
+    {{ self.title() }}
+{%- endblock %}
+
+{% block main_content %}
+    <form action="" method="post">
+        <div class="form-container">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="email" class="form-control" name="email" placeholder="New mail address">
+                    <span class="input-group-addon">Get verify code</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="captcha" placeholder="Email Captcha">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
