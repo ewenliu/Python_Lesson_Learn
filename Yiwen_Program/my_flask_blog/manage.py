@@ -57,5 +57,30 @@ def create_role():
     db.session.commit()
 
 
+@manager.option('-e', '--email', dest='email')
+@manager.option('-n', '--name', dest='name')
+def add_user_to_role(email, name):
+    user = CMSUser.query.filter_by(email=email).first()
+    if user:
+        role = CMSRole.query.filter_by(name=name).first()
+        if role:
+            role.users.append(user)
+            db.session.commit()
+            print('用户添加到角色成功')
+        else:
+            print('没有这个角色：%s' % role)
+    else:
+        print('%s没有这个用户' % email)
+
+
+@manager.command
+def test_permission():
+    user = CMSUser.query.first()
+    if user.is_developer:
+        print('这个用户有访问者的权限')
+    else:
+        print('这个用户没有访问者的权限')
+
+
 if __name__ == '__main__':
     manager.run()
