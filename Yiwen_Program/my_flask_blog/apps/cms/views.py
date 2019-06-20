@@ -15,13 +15,13 @@ from flask import (
     url_for,
     g
 )
-from .forms import LoginForm, ResetpwdForm
+from .forms import LoginForm, ResetpwdForm, ResetEmailForm
 from .models import CMSUser
 from .decorators import login_required
 import config
 from exts import db, mail
 from flask_mail import Message
-from utils import restful
+from utils import restful, blog_cache
 import string
 import random
 
@@ -54,7 +54,7 @@ def email_captcha():
     email = request.args.get('email')
     if not email:
         return restful.params_error('请传递邮箱参数！')
-    # 给邮箱发送邮件
+    # 产生6位随机大小写字母+数字
     source = list(string.ascii_letters)
     source.extend(map(lambda x:str(x), range(0, 10)))
     captcha = ''.join(random.sample(source, 6))
@@ -64,6 +64,7 @@ def email_captcha():
         mail.send(message)
     except:
         return restful.server_error()
+    blog_cache.set(email, captcha)
     return restful.success()
 
 
@@ -128,7 +129,14 @@ class ResetEmailView(views.MethodView):
         return render_template('cms/cms_resetemail.html')
 
     def post(self):
-        pass
+        form = ResetEmailForm(request.form)
+        if form.validate():
+            email = form.email.data
+            g.cms_user.email = email
+            db.session.commit()
+            return restful.success()
+        else:
+            return restful.params_error(form.get_error())
 
 
 bp.add_url_rule('/login/', view_func=LoginView.as_view('login'))
