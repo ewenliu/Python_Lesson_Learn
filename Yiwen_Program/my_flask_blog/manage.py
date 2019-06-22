@@ -10,10 +10,13 @@ from flask_migrate import Migrate, MigrateCommand
 from my_flask_website import create_app
 from exts import db
 from apps.cms import models as cms_models
+from apps.front import models as front_models
 
 CMSUser = cms_models.CMSUser
 CMSRole = cms_models.CMSRole
 CMSPermission = cms_models.CMSPermission
+
+FrontUser = front_models.FronUser
 
 app = create_app()
 
@@ -72,6 +75,14 @@ def add_user_to_role(email, name):
     else:
         print('%s没有这个用户' % email)
 
+
+@manager.option('-t', '--telephone', dest='telephone')
+@manager.option('-u', '--username', dest='username')
+@manager.option('-p', '--password', dest='password')
+def create_front_user(telephone, username, password):
+    user = FrontUser(telephone=telephone, username=username, password=password)
+    db.session.add(user)
+    db.session.commit()
 
 @manager.command
 def test_permission():
