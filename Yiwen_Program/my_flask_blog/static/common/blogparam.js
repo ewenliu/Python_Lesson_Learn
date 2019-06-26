@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/3/24.
  */
 
-var zlparam = {
+var blogparam = {
     setParam: function (href,key,value) {
         // 重新加载整个页面
         var isReplaced = false;

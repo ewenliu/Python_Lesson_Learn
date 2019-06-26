@@ -10,6 +10,10 @@
     <script src="{{ static('front/js/front_signup.js') }}"></script>
     <script src="{{ static('common/blogparam.js') }}"></script>
     <link rel="stylesheet" href="{{ static('front/css/front_signup.css') }}">
+    <script src="{{ static('common/blogajax.js') }}"></script>
+    <link rel="stylesheet" href="{{ static('common/sweetalert/sweetalert.css') }}">
+    <script src="{{ static('common/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ static('common/sweetalert/xtalert.js') }}"></script>
 </head>
 <body>
     <div class="outer-box">
@@ -24,7 +28,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="telephone" placeholder="Telephone">
                     <span class="input-group-btn">
-                        <button class="btn btn-default">Send SMS Code</button>
+                        <button id="sms-captcha-btn" class="btn btn-default">Send SMS Code</button>
                     </span>
                 </div>
             </div>

@@ -4,11 +4,27 @@
 # @Email   : ewen.liu@outlook.com
 # @File    : views.py
 # @Documents:
-from flask import Blueprint
+from flask import Blueprint, request
+from utils import restful, smssender
+from utils.captcha import Captcha
 
-bp = Blueprint('common', __name__, url_prefix='/common')
-
+bp = Blueprint('common', __name__, url_prefix='/c')
 
 @bp.route('/')
 def index():
-    return 'common index'
+    return 'test'
+
+@bp.route('/sms_captcha/')
+def sms_captcha():
+    # ?telephone=xxx
+    telephone = request.args.get('telephone')
+    if not telephone:
+        return restful.params_error(message='请输入手机号码')
+
+    captcha = Captcha.gene_text(number=4)
+    if smssender.send(telephone, captcha=captcha):
+        return restful.success()
+    else:
+        return restful.params_error(message='短信验证码发送失败')
+
+
