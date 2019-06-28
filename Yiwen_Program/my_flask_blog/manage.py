@@ -16,7 +16,7 @@ CMSUser = cms_models.CMSUser
 CMSRole = cms_models.CMSRole
 CMSPermission = cms_models.CMSPermission
 
-FrontUser = front_models.FronUser
+FrontUser = front_models.FrontUser
 
 app = create_app()
 

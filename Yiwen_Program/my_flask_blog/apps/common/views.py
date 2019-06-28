@@ -41,7 +41,10 @@ def sms_captcha():
     if form.validate():
         telephone = form.telephone.data
         captcha = Captcha.gene_text(number=4)
-        if smssender.send(telephone, captcha=captcha):
+        print('发送的短信验证码是：', captcha)
+        # if smssender.send(telephone, captcha=captcha):
+        # 屏蔽短信发送用以测试
+        if True:
             blog_cache.set(telephone, captcha)
             return restful.success()
         else:

@@ -18,7 +18,7 @@ class GenderEnum(enum.Enum):
     UNKNOW = 4
 
 
-class FronUser(db.Model):
+class FrontUser(db.Model):
     __tablename__ = 'front_user'
     id = db.Column(db.String(100), primary_key=True, default=shortuuid.uuid)
     telephone = db.Column(db.String(11), nullable=False, unique=True)
@@ -35,7 +35,7 @@ class FronUser(db.Model):
         if 'password' in kwargs:
             self.password = kwargs.get('password')
             kwargs.pop('password')
-        super(FronUser, self).__init__(*args, **kwargs)
+        super(FrontUser, self).__init__(*args, **kwargs)
 
     @property
     def password(self):
