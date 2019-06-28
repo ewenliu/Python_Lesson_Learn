@@ -1,64 +1,48 @@
+{% extends 'front/front_signbase.html' %}
 {% from "common/_macros.html" import static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Blog Signup</title>
-    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+{% block title %}
+    Blog Signup
+{% endblock %}
+
+{% block head %}
     <script src="{{ static('front/js/front_signup.js') }}"></script>
-    <script src="{{ static('common/blogparam.js') }}"></script>
-    <link rel="stylesheet" href="{{ static('front/css/front_signup.css') }}">
-    <script src="{{ static('common/blogajax.js') }}"></script>
-    <link rel="stylesheet" href="{{ static('common/sweetalert/sweetalert.css') }}">
-    <script src="{{ static('common/sweetalert/sweetalert.min.js') }}"></script>
-    <script src="{{ static('common/sweetalert/xtalert.js') }}"></script>
-</head>
-<body>
-    <div class="outer-box">
-        <div class="logo-box">
-            <a href="/">
-                <img src="{{ static('common/images/blog_log.png') }}">
-            </a>
-        </div>
-        <h2 class="page-title">Blog Sign Up</h2>
-        <div class="sign-box">
-            <div class="form-group">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="telephone" placeholder="Telephone">
-                    <span class="input-group-btn">
-                        <button id="sms-captcha-btn" class="btn btn-default">Send SMS Code</button>
-                    </span>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="sms_captcha" placeholder="SMS Code">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password2" placeholder="Password Confirm">
-            </div>
-            <div class="form-group">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="graph_captcha" placeholder="Graph">
-                    <span class="input-group-addon captcha-addon">
-                        <img id="captcha-img" class="captcha-img" src="{{ url_for('common.graph_captcha') }}" alt="">
-                    </span>
-                </div>
-            </div>
-            <div class="form-group">
-                <span style="display: none" id="return-to-span">{{ return_to }}</span>
-                <button class="btn btn-warning btn-block" id="submit-btn">Sign Now</button>
-            </div>
+{% endblock %}
+
+{% block h2_block %}
+    Sign Up
+{% endblock %}
+
+{% block signbox %}
+   <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" name="telephone" placeholder="Telephone">
+            <span class="input-group-btn">
+                <button id="sms-captcha-btn" class="btn btn-default">Send SMS Code</button>
+            </span>
         </div>
     </div>
-</body>
-</html>
+    <div class="form-group">
+        <input type="text" class="form-control" name="sms_captcha" placeholder="SMS Code">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password2" placeholder="Password Confirm">
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" name="graph_captcha" placeholder="Graph">
+            <span class="input-group-addon captcha-addon">
+                <img id="captcha-img" class="captcha-img" src="{{ url_for('common.graph_captcha') }}" alt="">
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-warning btn-block" id="submit-btn">Regist Now</button>
+    </div>
+{% endblock %}
