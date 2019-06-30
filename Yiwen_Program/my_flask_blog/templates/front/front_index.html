@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<a href="{{ url_for("front.signup")}}">Signup</a>
-</body>
-</html>
+{% extends "front/front_base.html" %}
+
+{% block title %}
+    My Flask Blog
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+    This is Home page.
+{% endblock %}
