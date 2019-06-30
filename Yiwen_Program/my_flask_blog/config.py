@@ -26,6 +26,7 @@ SQLALCHEMY_DATABASE_URI = '{}+{}://{}:{}@{}:{}/{}?charset=utf8'.format(DB_DIALEC
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 CMS_USER_ID = 'asdfafasdf'
+FRONT_USER_ID = 'AGOWJGOJ1920VZ'
 
 #发送者邮箱的服务器地址
 MAIL_SERVER = 'smtp.163.com'
