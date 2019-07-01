@@ -34,8 +34,8 @@ $(function () {
         profileLi.addClass('unfold').siblings().removeClass('unfold');
         profileLi.children('.subnav').children().eq(2).addClass('active').siblings().removeClass('active');
     } else if(url.indexOf('posts') >= 0){
-        var postManageLi = $('.post-manage');
-        postManageLi.addClass('unfold').siblings().removeClass('unfold');
+        var postsManageLi = $('.post-manage');
+        postsManageLi.addClass('unfold').siblings().removeClass('unfold');
     }else if(url.indexOf('boards') >= 0){
         var boardManageLi = $('.board-manage');
         boardManageLi.addClass('unfold').siblings().removeClass('unfold');
@@ -54,5 +54,8 @@ $(function () {
     }else if(url.indexOf('comments') >= 0) {
         var commentsManageLi = $('.comments-manage');
         commentsManageLi.addClass('unfold').siblings().removeClass('unfold');
+    }else if(url.indexOf('banners') >= 0) {
+        var bannersManageLi = $('.banner-manage');
+        bannersManageLi.addClass('unfold').siblings().removeClass('unfold');
     }
 });

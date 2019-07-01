@@ -10,7 +10,8 @@ import os
 DEBUG = True
 port = 5000
 
-SECRET_KEY = os.urandom(24)
+# SECRET_KEY = os.urandom(24)
+SECRET_KEY = b'\x15\xeez8\xb2@\xce\xcb!\xcd68\xe6}\xf7\xe7\x00\xc7\xec2\xbe\x0ft\xe5'
 
 DB_DIALECT = 'mysql'
 DB_DRIVER = 'pymysql'
