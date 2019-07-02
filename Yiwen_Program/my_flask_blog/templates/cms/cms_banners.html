@@ -1,12 +1,8 @@
 {% extends 'cms/cms_base.html' %}
-
+{% from "common/_macros.html" import static %}
 {% block head %}
+    <script src="{{ static('cms/js/banners.js') }}"></script>
     <style>
-        .top-box{
-            overflow: hidden;
-            background: #ecedf0;
-            padding: 10px;
-        }
         .top-box button{
             float: right;
         }
@@ -37,7 +33,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr></tr>
+            {% for banner in banners %}
+                <tr>
+                    <td>{{ banner.name }}</td>
+                    <td><a href="{{ banner.image_url }}" target="_blank">{{ banner.image_url }}</a></td>
+                    <td><a href="{{ banner.link_url }}" target="_blank">{{ banner.link_url }}</a></td>
+                    <td>{{ banner.priority }}</td>
+                    <td>{{ banner.create_time }}</td>
+                    <td>
+                        <button class="btn btn-default btn-xs">编辑</button>
+                        <button class="btn btn-danger btn-xs">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
     <!-- Modal -->
@@ -73,14 +81,14 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">权重：</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="priority" placeholder="优先级">
+                                <input type="number" class="form-control" name="priority" placeholder="优先级">
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">保存</button>
+                    <button type="button" class="btn btn-primary" id="save-banner-btn">保存</button>
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ from my_flask_website import create_app
 from exts import db
 from apps.cms import models as cms_models
 from apps.front import models as front_models
+from apps.models import BannerModel
 
 CMSUser = cms_models.CMSUser
 CMSRole = cms_models.CMSRole

@@ -15,7 +15,11 @@ from flask import (
     url_for,
     g
 )
-from .forms import LoginForm, ResetpwdForm, ResetEmailForm
+from .forms import (LoginForm,
+                    ResetpwdForm,
+                    ResetEmailForm,
+                    AddBannerForm)
+from ..models import BannerModel
 from .models import CMSUser, CMSPermission
 from .decorators import login_required, permission_required
 import config
@@ -56,10 +60,10 @@ def email_captcha():
         return restful.params_error('请传递邮箱参数！')
     # 产生6位随机大小写字母+数字
     source = list(string.ascii_letters)
-    source.extend(map(lambda x:str(x), range(0, 10)))
+    source.extend(map(lambda x: str(x), range(0, 10)))
     captcha = ''.join(random.sample(source, 6))
 
-    message = Message('CMS password forget', recipients=[email], body='You captcha is : %s'%captcha)
+    message = Message('CMS password forget', recipients=[email], body='You captcha is : %s' % captcha)
     try:
         mail.send(message)
     except:
@@ -119,7 +123,26 @@ def croles():
 @bp.route('/banners/')
 @login_required
 def banners():
-    return render_template('cms/cms_banners.html')
+    banners = BannerModel.query.all()
+    return render_template('cms/cms_banners.html', banners=banners)
+
+
+# abanner = add banner
+@bp.route('/abanner/', methods=['POST'])
+@login_required
+def abanner():
+    form = AddBannerForm(request.form)
+    if form.validate():
+        name = form.name.data
+        image_url = form.image_url.data
+        link_url = form.link_url.data
+        priority = form.priority.data
+        banner = BannerModel(name=name, image_url=image_url, link_url=link_url, priority=priority)
+        db.session.add(banner)
+        db.session.commit()
+        return restful.success()
+    else:
+        return restful.params_error(message=form.get_error())
 
 
 class LoginView(views.MethodView):
@@ -149,7 +172,8 @@ class LoginView(views.MethodView):
 
 
 class ResetPwdView(views.MethodView):
-    decorators=[login_required]
+    decorators = [login_required]
+
     def get(self):
         return render_template('cms/cms_resetpwd.html')
 
@@ -172,6 +196,7 @@ class ResetPwdView(views.MethodView):
 
 class ResetEmailView(views.MethodView):
     decorators = [login_required]
+
     def get(self):
         return render_template('cms/cms_resetemail.html')
 
