@@ -18,7 +18,8 @@ from flask import (
 from .forms import (LoginForm,
                     ResetpwdForm,
                     ResetEmailForm,
-                    AddBannerForm)
+                    AddBannerForm,
+                    UpdateBannerForm)
 from ..models import BannerModel
 from .models import CMSUser, CMSPermission
 from .decorators import login_required, permission_required
@@ -143,6 +144,48 @@ def abanner():
         return restful.success()
     else:
         return restful.params_error(message=form.get_error())
+
+
+# ubanner = update banner
+@bp.route('/ubanner/', methods=['POST'])
+@login_required
+def ubanner():
+    form = UpdateBannerForm(request.form)
+    if form.validate():
+        banner_id = form.banner_id.data
+        name = form.name.data
+        image_url = form.image_url.data
+        link_url = form.link_url.data
+        priority = form.priority.data
+        banner = BannerModel.query.get(banner_id)
+        if banner:
+            banner.name = name
+            banner.image_url = image_url
+            banner.link_url = link_url
+            banner.priority = priority
+            db.session.commit()
+            return restful.success()
+        else:
+            return restful.params_error(message='没有这个轮播图！')
+    else:
+        return restful.params_error(message=form.get_error())
+
+
+# dbanner = delete banner
+@bp.route('/dbanner/', methods=['POST'])
+@login_required
+def dbanner():
+    banner_id = request.form.get('banner_id')
+    if not banner_id:
+        return restful.params_error(message='请传入轮播图id！')
+
+    banner = BannerModel.query.get(banner_id)
+    if not banner:
+        return restful.params_error(message='没有这个轮播图！')
+    db.session.delete(banner)
+    db.session.commit()
+    return restful.success()
+
 
 
 class LoginView(views.MethodView):
