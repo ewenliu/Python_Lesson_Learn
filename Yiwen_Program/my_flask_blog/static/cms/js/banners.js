@@ -106,3 +106,15 @@ $(function () {
         });
     });
 });
+
+$(function () {
+    blogqiniu.setUp({
+        'domain': 'http://pu28slkuf.bkt.clouddn.com/',
+        'browse_button': 'upload-btn',
+        'uptoken_url': '/c/uptoken/',
+        'success': function (up,file,info) {
+            var imageInput = $("input[name='image_url']");
+            imageInput.val(file.name);
+        }
+    });
+});

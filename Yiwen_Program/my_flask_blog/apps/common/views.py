@@ -7,12 +7,14 @@
 from flask import (
     Blueprint,
     request,
-    make_response
+    make_response,
+    jsonify
 )
 from utils import restful, smssender, blog_cache
 from utils.captcha import Captcha
 from .forms import SMSCaptchaForm
 from io import BytesIO
+import qiniu
 
 
 
@@ -64,3 +66,12 @@ def graph_captcha():
     resp.content_type = 'image/png'
     return resp
 
+
+@bp.route('/uptoken/')
+def uptoken():
+    ACCESS_KEY = 'W2ydQ1qDpNZpzJG1SaseiTrgdjpIPNhZ3hfR3cVN'
+    SECRET_KEY = 'oGG5ocZ9UP66gANQh0eZk9I2odKu1iN9iyGQdKcW'
+    q = qiniu.Auth(ACCESS_KEY, SECRET_KEY)
+    bucket = 'flask-blog'
+    token = q.upload_token(bucket)
+    return jsonify({'uptoken': token})
