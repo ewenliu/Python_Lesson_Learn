@@ -22,18 +22,17 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img src="http://autoimg.laosiji.com/autoimg/cpk/66/37499/20190605192900833-1850-e2b5-751b-n47-1024.jpg" alt="...">
-                </div>
-                <div class="item">
-                  <img src="http://autoimg.laosiji.com/autoimg/cpk/66/37499/20190605192901732-1851-92mm-3c41-n47-1024.jpg" alt="...">
-                </div>
-                <div class="item">
-                  <img src="http://autoimg.laosiji.com/autoimg/cpk/66/37499/20190605192859936-1849-9n85-5768-n47-1024.jpg" alt="...">
-                </div>
-                <div class="item">
-                  <img src="http://autoimg.laosiji.com/autoimg/cpk/66/37499/20190605192859075-1848-1nbf-2fm8-n47-1024.jpg" alt="...">
-                </div>
+                {% for banner in banners %}
+                    {% if loop.first %}
+                        <div class="item active">
+                    {% else %}
+                        <div class="item">
+                    {% endif %}
+                        <a href="{{ banner.link_url }}">
+                            <img src="{{ banner.image_url }}" alt="...">
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
 
             <!-- Controls -->
