@@ -19,8 +19,11 @@ from .forms import (LoginForm,
                     ResetpwdForm,
                     ResetEmailForm,
                     AddBannerForm,
-                    UpdateBannerForm)
-from ..models import BannerModel
+                    UpdateBannerForm,
+                    AddBoardForm,
+                    UpdateBoardForm,
+                    DeleteBoardForm)
+from ..models import BannerModel, BoardModel
 from .models import CMSUser, CMSPermission
 from .decorators import login_required, permission_required
 import config
@@ -97,7 +100,66 @@ def comments():
 @login_required
 @permission_required(CMSPermission.BOARDER)
 def boards():
-    return render_template('cms/cms_boards.html')
+    board_models = BoardModel.query.all()
+    context = {
+        'boards': board_models
+    }
+    return render_template('cms/cms_boards.html', **context)
+
+
+# aboard = add board
+@bp.route('/aboard/', methods=['POST'])
+@login_required
+@permission_required(CMSPermission.BOARDER)
+def aboard():
+    form = AddBoardForm(request.form)
+    if form.validate():
+        name = form.name.data
+        board = BoardModel(name=name)
+        db.session.add(board)
+        db.session.commit()
+        return restful.success()
+    else:
+        return restful.params_error(message=form.get_error())
+
+
+# uboard = update board
+@bp.route('/uboard/', methods=['POST'])
+@login_required
+@permission_required(CMSPermission.BOARDER)
+def uboard():
+    form = UpdateBoardForm(request.form)
+    if form.validate():
+        board_id = form.board_id.data
+        name = form.name.data
+        board = BoardModel.query.get(board_id)
+        if board:
+            board.name = name
+            db.session.commit()
+            return restful.success()
+        else:
+            return restful.params_error(message='没有这个板块')
+    else:
+        return restful.params_error(message=form.get_error())
+
+
+# dboard = delete board
+@bp.route('/dboard/', methods=['POST'])
+@login_required
+@permission_required(CMSPermission.BOARDER)
+def dboard():
+    form = DeleteBoardForm(request.form)
+    if form.validate():
+        board_id = form.board_id.data
+        board = BoardModel.query.get(board_id)
+        if board:
+            db.session.delete(board)
+            db.session.commit()
+            return restful.success()
+        else:
+            return restful.params_error(message='没有这个板块')
+    else:
+        return restful.params_error(message=form.get_error())
 
 
 @bp.route('/fusers/')
@@ -185,7 +247,6 @@ def dbanner():
     db.session.delete(banner)
     db.session.commit()
     return restful.success()
-
 
 
 class LoginView(views.MethodView):
