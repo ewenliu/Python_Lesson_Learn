@@ -59,7 +59,3 @@ class AddBoardForm(BaseForm):
 
 class UpdateBoardForm(AddBoardForm):
     board_id = IntegerField(validators=[InputRequired(message='请输入板块的id')])
-
-
-class DeleteBoardForm(AddBoardForm):
-    board_id = IntegerField(validators=[InputRequired(message='请输入板块的id')])

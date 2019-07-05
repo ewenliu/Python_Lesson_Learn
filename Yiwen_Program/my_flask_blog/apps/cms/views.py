@@ -21,8 +21,7 @@ from .forms import (LoginForm,
                     AddBannerForm,
                     UpdateBannerForm,
                     AddBoardForm,
-                    UpdateBoardForm,
-                    DeleteBoardForm)
+                    UpdateBoardForm)
 from ..models import BannerModel, BoardModel
 from .models import CMSUser, CMSPermission
 from .decorators import login_required, permission_required
@@ -148,18 +147,15 @@ def uboard():
 @login_required
 @permission_required(CMSPermission.BOARDER)
 def dboard():
-    form = DeleteBoardForm(request.form)
-    if form.validate():
-        board_id = form.board_id.data
-        board = BoardModel.query.get(board_id)
-        if board:
-            db.session.delete(board)
-            db.session.commit()
-            return restful.success()
-        else:
-            return restful.params_error(message='没有这个板块')
-    else:
-        return restful.params_error(message=form.get_error())
+    board_id = request.form.get('board_id')
+    if not board_id:
+        return restful.params_error(message='请传入板块id！')
+    board = BoardModel.query.get(board_id)
+    if not board:
+        return restful.params_error(message='没有这个板块')
+    db.session.delete(board)
+    db.session.commit()
+    return restful.success()
 
 
 @bp.route('/fusers/')
