@@ -45,3 +45,5 @@ UEDITOR_QINIU_SECRET_KEY = "oGG5ocZ9UP66gANQh0eZk9I2odKu1iN9iyGQdKcW"
 UEDITOR_QINIU_BUCKET_NAME = "flask-blog"
 UEDITOR_QINIU_DOMAIN = "http://pu28slkuf.bkt.clouddn.com/"
 
+# flask pagination 的相关配置
+PER_PAGE = 10

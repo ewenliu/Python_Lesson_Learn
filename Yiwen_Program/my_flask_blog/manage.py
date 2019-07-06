@@ -85,6 +85,7 @@ def create_front_user(telephone, username, password):
     db.session.add(user)
     db.session.commit()
 
+
 @manager.command
 def test_permission():
     user = CMSUser.query.first()
@@ -92,6 +93,21 @@ def test_permission():
         print('这个用户有访问者的权限')
     else:
         print('这个用户没有访问者的权限')
+
+
+@manager.command
+def create_test_post():
+    for x in range(1, 200):
+        title = '标题%s' % x
+        content = '内容: %s' % x
+        board = BoardModel.query.first()
+        author = FrontUser.query.first()
+        post = PostModel(title=title, content=content)
+        post.board = board
+        post.author = author
+        db.session.add(post)
+        db.session.commit()
+    print('测试帖子添加完毕!')
 
 
 if __name__ == '__main__':
