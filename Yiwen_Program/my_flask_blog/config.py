@@ -39,5 +39,9 @@ MAIL_USERNAME = 'hduewenliu@163.com'
 MAIL_PASSWORD = 'hduewen1122'
 MAIL_DEFAULT_SENDER = 'hduewenliu@163.com'
 
-
+# ueditor upload infos
+UEDITOR_QINIU_ACCESS_KEY = "W2ydQ1qDpNZpzJG1SaseiTrgdjpIPNhZ3hfR3cVN"
+UEDITOR_QINIU_SECRET_KEY = "oGG5ocZ9UP66gANQh0eZk9I2odKu1iN9iyGQdKcW"
+UEDITOR_QINIU_BUCKET_NAME = "flask-blog"
+UEDITOR_QINIU_DOMAIN = "http://pu28slkuf.bkt.clouddn.com/"
 

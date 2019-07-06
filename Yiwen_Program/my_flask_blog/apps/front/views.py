@@ -10,7 +10,8 @@ from flask import (
     views,
     render_template,
     request,
-    session
+    session,
+    g
 )
 from .forms import SignupForm, SigninForm, AddPostForm
 from utils import restful, safeutils
@@ -28,9 +29,11 @@ bp = Blueprint('front', __name__)
 def index():
     banners = BannerModel.query.order_by(BannerModel.priority.desc()).limit(4)
     boards = BoardModel.query.all()
+    posts = PostModel.query.all()
     context = {
         'banners': banners,
-        'boards': boards
+        'boards': boards,
+        'posts': posts
     }
     return render_template('front/front_index.html', **context)
 
@@ -52,6 +55,7 @@ def apost():
                 return restful.params_error(message='没有这个板块！')
             post = PostModel(title=title, content=content)
             post.board = board
+            post.author = g.front_user
             db.session.add(post)
             db.session.commit()
             return restful.success()
