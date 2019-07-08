@@ -62,7 +62,7 @@ def post_detail(post_id):
     return render_template('front/front_pdetail.html', post=post)
 
 
-@bp.route('/acomment/')
+@bp.route('/acomment/', methods=['POST'])
 @login_required
 def acomment():
     form = AddCommentForm(request.form)
