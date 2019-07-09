@@ -22,7 +22,7 @@ from .forms import (LoginForm,
                     UpdateBannerForm,
                     AddBoardForm,
                     UpdateBoardForm)
-from ..models import BannerModel, BoardModel
+from ..models import BannerModel, BoardModel, PostModel, HighlightPostModel
 from .models import CMSUser, CMSPermission
 from .decorators import login_required, permission_required
 import config
@@ -77,15 +77,53 @@ def email_captcha():
 
 @bp.route('/email/')
 def send_mail():
-    message = Message('刘逸文是傻逼吗', recipients=['xuefang.zhu@nokia.com'], body='确定过眼神，是傻逼本人')
+    message = Message('刘逸文是傻逼吗', recipients=['kevin.2.liu@nokia-sbell.com'], body='确定过眼神，是傻逼本人')
     mail.send(message)
 
 
 @bp.route('/posts/')
 @login_required
-@permission_required(CMSPermission.VISITOR)
+@permission_required(CMSPermission.POSTER)
 def posts():
-    return render_template('cms/cms_posts.html')
+    context = {
+        'posts': PostModel.query.all()
+    }
+    return render_template('cms/cms_posts.html', **context)
+
+
+# hpost = highlight post
+@bp.route('/hpost/', methods=['POST'])
+@login_required
+@permission_required(CMSPermission.POSTER)
+def hpost():
+    post_id = request.form.get('post_id')
+    if not post_id:
+        return restful.params_error('请传入帖子id！')
+    post = PostModel.query.get(post_id)
+    if not post:
+        return restful.params_error('没有这篇帖子！')
+    highlight = HighlightPostModel()
+    highlight.post = post
+    db.session.add(highlight)
+    db.session.commit()
+    return restful.success()
+
+
+# uhpost = un-highlight post
+@bp.route('/uhpost/', methods=['POST'])
+@login_required
+@permission_required(CMSPermission.POSTER)
+def uhpost():
+    post_id = request.form.get('post_id')
+    if not post_id:
+        return restful.params_error('请传入帖子id！')
+    post = PostModel.query.get(post_id)
+    if not post:
+        return restful.params_error('没有这篇帖子！')
+    highlight = HighlightPostModel.query.filter_by(post_id=post_id).first()
+    db.session.delete(highlight)
+    db.session.commit()
+    return restful.success()
 
 
 @bp.route('/comments/')
