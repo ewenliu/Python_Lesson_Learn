@@ -31,6 +31,7 @@ from flask_mail import Message
 from utils import restful, blog_cache
 import string
 import random
+from tasks import send_mail
 
 
 bp = Blueprint('cms', __name__, url_prefix='/cms')
@@ -66,19 +67,20 @@ def email_captcha():
     source.extend(map(lambda x: str(x), range(0, 10)))
     captcha = ''.join(random.sample(source, 6))
 
-    message = Message('CMS password forget', recipients=[email], body='You captcha is : %s' % captcha)
-    try:
-        mail.send(message)
-    except:
-        return restful.server_error()
+    # message = Message('CMS password forget', recipients=[email], body='You captcha is : %s' % captcha)
+    # try:
+    #     mail.send(message)
+    # except:
+    #     return restful.server_error()
+    send_mail.delay('CMS password forget', recipients=[email], body='You captcha is : %s' % captcha)
     blog_cache.set(email, captcha)
     return restful.success()
 
 
-@bp.route('/email/')
-def send_mail():
-    message = Message('刘逸文是傻逼吗', recipients=['kevin.2.liu@nokia-sbell.com'], body='确定过眼神，是傻逼本人')
-    mail.send(message)
+# @bp.route('/email/')
+# def send_mail():
+#     message = Message('刘逸文是傻逼吗', recipients=['kevin.2.liu@nokia-sbell.com'], body='确定过眼神，是傻逼本人')
+#     mail.send(message)
 
 
 @bp.route('/posts/')
