@@ -10,6 +10,7 @@ import os
 DEBUG = True
 port = 5000
 
+
 # 正式上线需要用urandom，不能采用固定session密钥
 # SECRET_KEY = os.urandom(24)
 SECRET_KEY = b'\x15\xeez8\xb2@\xce\xcb!\xcd68\xe6}\xf7\xe7\x00\xc7\xec2\xbe\x0ft\xe5'
