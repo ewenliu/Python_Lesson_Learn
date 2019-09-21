@@ -7,7 +7,7 @@
 
 def insertion_sort(li):
     for i in range(1, len(li)):
-        for j in range(i, 0, -1):
+        for j in range(i, 0, -1):  #i-1以前的位置排好序后，逐次逼近i与i之前的元素
             if li[j] < li[j-1]:
                 li[j], li[j-1] = li[j-1], li[j]
     return li

@@ -12,7 +12,7 @@ def bubble_sort(li):
             if li[j]>li[j+1]:
                 li[j], li[j+1]=li[j+1], li[j]
                 flag = True    #如果发生改变
-        if not flag:    #如果没有发生交换
+        if not flag:    #如果本轮没有发生交换
             return li
     return li
 
