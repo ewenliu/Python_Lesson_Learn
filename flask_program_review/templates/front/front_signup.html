@@ -1,0 +1,46 @@
+{% extends 'front/front_signbase.html' %}
+{% from "common/_macros.html" import static %}
+
+{% block title %}My BLOG Sign up page{% endblock %}
+
+{% block head %}
+    <script src="{{ static('common/blogparam.js') }}"></script>
+    <script src="{{ static('front/js/front_signup.js') }}"></script>
+{% endblock %}
+
+{% block h2_block %}My blog Sign up{% endblock %}
+
+
+{% block signbox %}
+<div class="form-group">
+<div class="input-group">
+    <input type="text" class="form-control" name="email" id="" placeholder="Email address">
+    <span class="input-group-btn" id = 'captcha-btn'>
+        <button class="btn btn-default">Send captcha</button>
+    </span>
+</div>
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" name="email_captcha" id="" placeholder="Email Captcha">
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" name="username" id="" placeholder="Username">
+</div>
+<div class="form-group">
+    <input type="password" class="form-control" name="password" id="" placeholder="Password">
+</div>
+<div class="form-group">
+    <input type="password" class="form-control" name="password_confirm" id="" placeholder="Confirm password">
+</div>
+<div class="form-group">
+    <div class="input-group">
+        <input type="text" class="form-control" name="graph_captcha" id="" placeholder="Graph captcha">
+        <span class="input-group-addon captcha-addon"><img id="captcha-img" class="captcha-img" src="{{ url_for('common.gragh_captcha') }}" alt=""></span>
+    </div>
+</div>
+<div class="form-group">
+    <button class="btn btn-warning btn-block" id="submit-btn">Sign up now</button>
+</div>
+{% endblock %}
+
+

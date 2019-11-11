@@ -1,0 +1,47 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    My Profile
+{% endblock %}
+
+{% block page_title %}
+    My Profile
+{% endblock %}
+
+{% block main_content %}
+    {% set user = g.cms_user %}
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+            <td>Username: </td>
+            <td>{{ user.username }}</td>
+        </tr>
+      <tr>
+          <td>E-Mail: </td>
+          <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+          <td>Role: </td>
+          <td>
+              {% for role in user.roles %}
+                  {{ role.name }}
+                  {% if not loop.last %}, {% endif %}
+              {% endfor %}
+          </td>
+      </tr>
+      <tr>
+          <td>Permission: </td>
+          <td>
+              {% for role in user.roles %}
+                  {{ role.desc }}
+                  {% if not loop.last %}/{% endif %}
+              {% endfor %}
+          </td>
+      </tr>
+      <tr>
+          <td>Join time: </td>
+          <td>{{ user.join_time }}</td>
+      </tr>
+      </tbody>
+    </table>
+{% endblock %}
