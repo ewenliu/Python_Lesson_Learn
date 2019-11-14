@@ -21,3 +21,18 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     width: 250px;
     float: right;
 }
+
+.navbar-inverse{
+    margin-bottom: 20px;
+}
+
+.navbar-inverse .navbar-nav li a{
+    color: #fcf8e3;
+}
+
+/*.navbar-inverse .navbar-right li a{*/
+/*    color: #333;*/
+/*}*/
+.dropdown-menu{
+    background-color: #ddd;
+}

@@ -9,7 +9,8 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar navbar-default">
+{#    <nav class="navbar navbar-default">#}
+    <nav class="navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -19,20 +20,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Blog</a>
+{#                <a class="navbar-brand" href="/">Blog</a>#}
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+{#                    <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>#}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About Me</a></li>
                 </ul>
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Key word...">
-                    </div>
-                    <button type="submit" class="btn btn-default">Search</button>
-                </form>
+{#                <form class="navbar-form navbar-left">#}
+{#                    <div class="form-group">#}
+{#                        <input type="text" class="form-control" placeholder="Key word...">#}
+{#                    </div>#}
+{#                    <button type="submit" class="btn btn-default">Search</button>#}
+{#                </form>#}
                 <ul class="nav navbar-nav navbar-right">
                     {% if g.front_user %}
                         {#                    下面这个span提供给js读取是否登陆#}
@@ -45,14 +48,14 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: 115px">
-                                <li><a href="#">Info</a></li>
-                                <li><a href="#">Setting</a></li>
-                                <li><a href="#">Log off</a></li>
+                                <li><a href="#" style="color: #333">Info</a></li>
+                                <li><a href="#" style="color: #333">Setting</a></li>
+                                <li><a href="#" style="color: #333">Log off</a></li>
                             </ul>
                         </li>
                     {% else %}
                         <li><a href="{{ url_for('front.signin') }}">Login</a></li>
-                        <li><a href="{{ url_for('front.signup') }}">Sign Up</a></li>
+{#                        <li><a href="{{ url_for('front.signup') }}">Sign Up</a></li>#}
                     {% endif %}
 
                 </ul>

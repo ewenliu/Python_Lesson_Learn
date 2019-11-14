@@ -13,7 +13,7 @@ DEBUG = True
 DB_DIALECT = 'mysql'
 DB_DRIVER = 'mysqldb'
 DB_USERNAME = 'root'
-DB_PASSWORD = 'hduewen1122!'
+DB_PASSWORD = 'root'
 DB_HOST = '127.0.0.1'
 DB_PORT = '3306'
 DB_DATABASE = 'flask_program_review'
@@ -61,5 +61,5 @@ UEDITOR_UPLOAD_PATH = os.path.join('images')
 PER_PAGE = 10
 
 # celery 相关配置
-CELERY_RESULT_BACKEND = 'redis://:hduewen1122@127.0.0.1:6379/0'
-CELERY_BROKER_URL = 'redis://:hduewen1122@127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://:111111@10.140.14.105:6379/0'
+CELERY_BROKER_URL = 'redis://:111111@10.140.14.105:6379/0'

@@ -60,9 +60,13 @@ def index():
         query_obj = query_obj.filter(PostModel.board_id==board_id)
         posts = query_obj.slice(start, end)
         total_page = query_obj.count()
+        post_count = PostModel.query.filter(PostModel.board_id==board_id).count()
     else:
         posts = query_obj.slice(start, end)
         total_page = query_obj.count()
+        post_count = PostModel.query.count()
+
+
     # outer_window, inner_window用来限制翻页div的左右的动态个数
     pagination = Pagination(bs_version=3, page=page, total=total_page, outer_window=0, inner_window=2)
     context = {
@@ -71,7 +75,8 @@ def index():
         'posts': posts,
         'pagination': pagination,
         'current_board_id': board_id,
-        'current_sort_method': sort
+        'current_sort_method': sort,
+        'post_count': post_count
     }
     return render_template('front/front_index.html', **context)
 

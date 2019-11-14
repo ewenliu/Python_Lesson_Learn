@@ -71,3 +71,27 @@
 .post-info span{
     margin-right: 10px;
 }
+
+.list-group-item-success{
+    background-color: #333;
+}
+
+a.list-group-item-success:hover{
+    color: #fcf8e3;
+    background-color: #555;
+}
+
+a.list-group-item-success{
+    color: #fcf8e3;
+}
+
+.btn-post{
+    color: #fcf8e3;
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn:hover{
+    color: #fcf8e3;
+    background-color: #555;
+}
