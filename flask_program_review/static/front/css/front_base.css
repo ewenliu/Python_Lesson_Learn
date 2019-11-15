@@ -60,7 +60,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     /*margin-left: 15px;*/
 }
 
-p{
+.bs-docs-footer p{
     /*margin-left: 15px;*/
     margin-bottom: 5px;
     color: #fcf8e3;
