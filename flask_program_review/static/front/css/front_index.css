@@ -32,6 +32,7 @@
 
 .post-group-head li.active{
     background: #ccc;
+    border-radius: 5px;
 }
 
 .post-list-group{
@@ -42,6 +43,11 @@
 .post-list-group li{
     overflow: hidden;
     padding-bottom: 20px;
+}
+
+.post-list-group a{
+    color: #3c763d;
+    font-size: 15px;
 }
 
 .author-avatar-group{
@@ -95,3 +101,12 @@ a.list-group-item-success{
     color: #fcf8e3;
     background-color: #555;
 }
+
+.jumbotron{
+    padding: 48px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #343a40;
+    margin-top: 70px;
+}
+

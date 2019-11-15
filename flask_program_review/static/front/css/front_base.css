@@ -15,11 +15,13 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .lg-container{
     width: 730px;
     float: left;
+    margin-bottom: 40px;
 }
 
 .sm-container{
     width: 250px;
     float: right;
+    margin-top: 20px;
 }
 
 .navbar-inverse{
@@ -35,4 +37,31 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 /*}*/
 .dropdown-menu{
     background-color: #ddd;
+}
+
+.bs-docs-footer{
+    margin-top: 0;
+    border-top: 0;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: #2a2730;
+    display: block;
+}
+
+.bs-docs-footer a{
+    color: #fcf8e3;
+}
+
+.bs-docs-footer-links li{
+    display: inline-block;
+    margin-bottom: 10px;
+    /*margin-left: 15px;*/
+}
+
+p{
+    /*margin-left: 15px;*/
+    margin-bottom: 5px;
+    color: #fcf8e3;
 }

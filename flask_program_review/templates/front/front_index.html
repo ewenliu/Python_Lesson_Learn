@@ -8,42 +8,49 @@
 {% endblock %}
 
 {% block body %}
-    <div class="lg-container">
-        <div id="carousel-example-generic" class="carousel slide index-banner" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-{#                <li data-target="#carousel-example-generic" data-slide-to="3"></li>#}
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                {% for banner in banners %}
-                    {% if loop.first %}
-                        <div class="item active">
-                    {% else %}
-                        <div class="item">
-                    {% endif %}
-
-                        <a href="{{ banner.link_url}}" target="_blank">
-                            <img src="{{ banner.image_url }}" alt="...">
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+           <div class="jumbotron">
+          <h1>Hello, 小白!</h1>
+          <p>..</p>
+          <p>..</p>
+{#          <p>...</p>#}
+          <p><a class="btn btn-primary btn-lg" href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=萨摩耶&rsv_pq=95c94e9700015db1&rsv_t=68e8NfDkxgm0%2B25DzG7nPaN1PJqA8H8aQfNHjTuEQs5jy3S8O0NMKiFtMEk&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=samoye&rsp=0&inputT=2346&rsv_sug4=2754" target="_blank" role="button">了解更多小白</a></p>
         </div>
+    <div class="lg-container">
+{#        <div id="carousel-example-generic" class="carousel slide index-banner" data-ride="carousel">#}
+{#            <!-- Indicators -->#}
+{#            <ol class="carousel-indicators">#}
+{#                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+{#                <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+{#                <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+{#                <li data-target="#carousel-example-generic" data-slide-to="3"></li>#}
+{#            </ol>#}
+{##}
+{#            <!-- Wrapper for slides -->#}
+{#            <div class="carousel-inner" role="listbox">#}
+{#                {% for banner in banners %}#}
+{#                    {% if loop.first %}#}
+{#                        <div class="item active">#}
+{#                    {% else %}#}
+{#                        <div class="item">#}
+{#                    {% endif %}#}
+{##}
+{#                        <a href="{{ banner.link_url}}" target="_blank">#}
+{#                            <img src="{{ banner.image_url }}" alt="...">#}
+{#                        </a>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{##}
+{#            <!-- Controls -->#}
+{#            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">#}
+{#                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+{#                <span class="sr-only">Previous</span>#}
+{#            </a>#}
+{#            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">#}
+{#                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
+{#                <span class="sr-only">Next</span>#}
+{#            </a>#}
+{#        </div>#}
 
         <div class="post-group">
             <ul class="post-group-head">
@@ -88,7 +95,7 @@
                                 <span>Author: {{ post.author.username }}</span>
                                 <span>Create Time: {{ post.create_time }}</span>
                                 <span>Comments: 0</span>
-                                <span>Read: 0</span>
+{#                                <span>Read: 0</span>#}
                             </p>
                         </div>
                     </li>
