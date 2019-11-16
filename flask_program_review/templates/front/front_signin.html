@@ -4,6 +4,7 @@
 {% block title %}My BLOG Sign In{% endblock %}
 
 {% block head %}
+    <link rel="stylesheet" href="{{ static(filename='front/css/front_signbase.css') }}">
     <script src="{{ static(filename='front/js/front_signin.js') }}"></script>
 {% endblock %}
 
@@ -21,12 +22,9 @@
         <label>
             <input type="checkbox" name="remember" value="1">Remember Me
         </label>
+        <a href="#" class="resetpwd-link" style="float: right">Forget password?</a>
     </div>
     <div class="form-group">
-        <button class="btn btn-warning btn-block" id="submit-btn">Sign in now</button>
-    </div>
-    <div class="form-group">
-        <a href="{{ url_for('front.signup') }}" class="signup-link">No account?</a>
-        <a href="#" class="resetpwd-link" style="float: right;">Forget password?</a>
+        <button class="btn btn-login btn-block" id="submit-btn">Sign in now</button>
     </div>
 {% endblock %}

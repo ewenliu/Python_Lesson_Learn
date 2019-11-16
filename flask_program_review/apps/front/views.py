@@ -4,7 +4,7 @@
 # @Email   : ewen.liu@outlook.com
 # @File    : views.py
 # @Documents:
-from flask import Blueprint, views, render_template, request, session, url_for, g, abort
+from flask import Blueprint, views, render_template, request, session, url_for, g, abort, redirect
 from .forms import SignupForm, SigninForm, AddPostForm, AddCommentForm
 from utils import restful, safeutils
 from exts import db
@@ -46,15 +46,17 @@ def index():
         query_obj = db.session.query(PostModel).outerjoin(HighlightPostModel).order_by(
             HighlightPostModel.create_time.desc(), PostModel.create_time.desc())
     # 点赞的个数排序
-    elif sort == 3:
-        query_obj = PostModel.query.order_by(PostModel.create_time.desc())
+    # elif sort == 3:
+    #     query_obj = PostModel.query.order_by(PostModel.create_time.desc())
     # 按照评论数排序
-    elif sort == 4:
+    elif sort == 3:
         # 对应的sql：
         # SELECT post.id AS post_id, post.title AS post_title, post.content AS post_content, post.create_time AS post_create_time, post.board_id AS post_board_id, post.author_id AS post_author_id
         # FROM post LEFT OUTER JOIN comment ON post.id = comment.post_id GROUP BY post.id ORDER BY count(comment.id) DESC, post.create_time DESC
         query_obj = db.session.query(PostModel).outerjoin(CommentModel).group_by(PostModel.id).order_by(
             func.count(CommentModel.id).desc(), PostModel.create_time.desc())
+    else:
+        abort(404)
 
     if board_id:
         query_obj = query_obj.filter(PostModel.board_id==board_id)
@@ -98,6 +100,7 @@ def acomment():
         content = form.content.data
         post_id = form.post_id.data
         post = PostModel.query.get(post_id)
+        post.num_comment += 1
         if post:
             comment = CommentModel(content=content)
             comment.post = post
@@ -138,6 +141,13 @@ def apost():
             return restful.success()
         else:
             return restful.params_error(form.get_error())
+
+
+@bp.route('/logout/')
+@login_required
+def logout():
+    del session[config.FRONT_USER_ID]
+    return redirect(url_for('front.index'))
 
 
 class SignupView(views.MethodView):

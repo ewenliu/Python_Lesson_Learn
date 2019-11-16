@@ -31,6 +31,8 @@ class PostModel(db.Model):
     title = db.Column(db.String(200), nullable=False)
     content = db.Column(db.Text, nullable=False)
     create_time = db.Column(db.DateTime, default=datetime.now)
+    num_comment = db.Column(db.Integer, default=0, nullable=False)
+
     board_id = db.Column(db.Integer, db.ForeignKey("board.id"))
     author_id = db.Column(db.String(100), db.ForeignKey("front_user.id"), nullable=False)
 

@@ -18,8 +18,7 @@
                 <span>Time: {{ post.create_time }}</span>
                 <span>Author: {{ post.author.username }}</span>
                 <span>Board: {{ post.board.name }}</span>
-                <span>Read: 0</span>
-                <span>Comment: 0</span>
+                <span>Comment: {{ post.num_comment }}</span>
             </p>
             <article class="post-content" id="post-content" data-id="{{ post.id }}">
 {#                展示 html的文本和样式，否则是返回纯html文本内容#}

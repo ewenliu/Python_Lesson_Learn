@@ -10,7 +10,7 @@
 {% block body %}
            <div class="jumbotron">
           <h1>Hello, 小白!</h1>
-          <p>..</p>
+          <p>小白，是一只狗的名字</p>
           <p>..</p>
 {#          <p>...</p>#}
           <p><a class="btn btn-primary btn-lg" href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=萨摩耶&rsv_pq=95c94e9700015db1&rsv_t=68e8NfDkxgm0%2B25DzG7nPaN1PJqA8H8aQfNHjTuEQs5jy3S8O0NMKiFtMEk&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=samoye&rsp=0&inputT=2346&rsv_sug4=2754" target="_blank" role="button">了解更多小白</a></p>
@@ -66,23 +66,23 @@
                     <li><a href="{{ url_for('front.index', sort_method=2, board_id=current_board_id) }}">Highlight</a></li>
                 {% endif %}
 
-                {% if current_sort_method==3 %}
-                    <li class="active"><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most likes</a></li>
-                {% else %}
-                    <li><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most likes</a></li>
-                {% endif %}
+{#                {% if current_sort_method==3 %}#}
+{#                    <li class="active"><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most likes</a></li>#}
+{#                {% else %}#}
+{#                    <li><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most likes</a></li>#}
+{#                {% endif %}#}
 
-                {% if current_sort_method==4 %}
-                    <li class="active"><a href="{{ url_for('front.index', sort_method=4, board_id=current_board_id) }}">Most comments</a></li>
+                {% if current_sort_method==3 %}
+                    <li class="active"><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most comments</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('front.index', sort_method=4, board_id=current_board_id) }}">Most comments</a></li>
+                    <li><a href="{{ url_for('front.index', sort_method=3, board_id=current_board_id) }}">Most comments</a></li>
                 {% endif %}
             </ul>
             <ul class="post-list-group">
                 {% for post in posts %}
                     <li>
                         <div class="author-avatar-group">
-                            <img src="{{ post.author.avatar or static(filename="common/images/blogease.png") }}" alt="">
+                            <img src="{{ post.author.avatar or static(filename="common/images/samo.png") }}" alt="">
                         </div>
                         <div class="post-info-group">
                             <p class="post-title">
@@ -94,8 +94,7 @@
                             <p class="post-info">
                                 <span>Author: {{ post.author.username }}</span>
                                 <span>Create Time: {{ post.create_time }}</span>
-                                <span>Comments: 0</span>
-{#                                <span>Read: 0</span>#}
+                                <span>Comments: {{ post.num_comment }}</span>
                             </p>
                         </div>
                     </li>
