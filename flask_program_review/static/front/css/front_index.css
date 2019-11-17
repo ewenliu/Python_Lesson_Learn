@@ -110,3 +110,9 @@ a.list-group-item-success{
     margin-top: 70px;
 }
 
+.sidebar-about{
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+

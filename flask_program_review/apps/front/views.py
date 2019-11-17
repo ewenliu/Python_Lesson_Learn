@@ -181,7 +181,7 @@ class SigninView(views.MethodView):
     def get(self):
         return_to = request.referrer
         # 如果从注册页面来的，登陆完就不要返回回去了
-        if return_to and return_to != request.url and return_to!=url_for('front.signup') and safeutils.is_safe_url(return_to):
+        if return_to and return_to != request.url and return_to != url_for('front.signup') and safeutils.is_safe_url(return_to):
             return render_template('front/front_signin.html', return_to=return_to)
         else:
             return render_template('front/front_signin.html')
