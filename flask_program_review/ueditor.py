@@ -18,6 +18,8 @@ import base64
 import sys
 import os
 from urllib import parse
+from qcloud_cos import CosConfig
+from qcloud_cos import CosS3Client
 # 更改工作目录。这么做的目的是七牛qiniu的sdk
 # 在设置缓存路径的时候默认会设置到C:/Windows/System32下面
 # 会造成没有权限创建。
@@ -113,8 +115,6 @@ def upload():
             buffer = BytesIO()
             image.save(buffer)
             buffer.seek(0)
-            from qcloud_cos import CosConfig
-            from qcloud_cos import CosS3Client
             secret_id = app.config["TENCENT_CLOUD_SECRET_ID"] # 替换为用户的 secretId
             secret_key = app.config["TENCENT_CLOUD_SECRET_KEY"] # 替换为用户的 secretKey
             region = app.config["TENCENT_CLOUD_REGION"]  # 替换为用户的 Region
