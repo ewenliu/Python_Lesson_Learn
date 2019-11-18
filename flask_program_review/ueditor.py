@@ -34,6 +34,7 @@ bp = Blueprint('ueditor',__name__,url_prefix='/ueditor')
 
 UEDITOR_UPLOAD_PATH = ""
 UEDITOR_UPLOAD_TO_QINIU = False
+UEDITOR_UPLOAD_TO_TENCENT = True
 UEDITOR_QINIU_ACCESS_KEY = ""
 UEDITOR_QINIU_SECRET_KEY = ""
 UEDITOR_QINIU_BUCKET_NAME = ""
@@ -108,6 +109,33 @@ def upload():
                 result['url'] = parse.urljoin(UEDITOR_QINIU_DOMAIN,ret['key'])
                 result['title'] = ret['key']
                 result['original'] = ret['key']
+        elif UEDITOR_UPLOAD_TO_TENCENT:
+            buffer = BytesIO()
+            image.save(buffer)
+            buffer.seek(0)
+            from qcloud_cos import CosConfig
+            from qcloud_cos import CosS3Client
+            secret_id = app.config["TENCENT_CLOUD_SECRET_ID"] # 替换为用户的 secretId
+            secret_key = app.config["TENCENT_CLOUD_SECRET_KEY"] # 替换为用户的 secretKey
+            region = app.config["TENCENT_CLOUD_REGION"]  # 替换为用户的 Region
+            token = None  # 使用临时密钥需要传入 Token，默认为空，可不填
+            scheme = 'https'  # 指定使用 http/https 协议来访问 COS，默认为 https，可不填
+            config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)
+            # 2. 获取客户端对象
+            Bucket = app.config["TENCENT_CLOUD_BUCKET"]
+            client = CosS3Client(config)
+            response = client.put_object(
+                Bucket=Bucket,
+                Body=buffer.read(),
+                Key=save_filename,
+                StorageClass='STANDARD',
+                EnableMD5=False
+            )
+            url = scheme + '://' + Bucket + '.cos.' + region + '.myqcloud.com/' + save_filename
+            result['state'] = "SUCCESS"
+            result['url'] = url
+            result['title'] = save_filename
+            result['original'] = save_filename
         else:
             image.save(os.path.join(UEDITOR_UPLOAD_PATH, save_filename))
             result['state'] = "SUCCESS"

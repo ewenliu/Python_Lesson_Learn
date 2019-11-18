@@ -31,17 +31,6 @@ CMS_USER_ID = 'ASDFADFSJ'
 # Front session用的key
 FRONT_USER_ID = 'jvoiaj214314'
 
-# TLS: 587
-# SSL: 465
-# 发送者邮箱的服务器地址
-# MAIL_SERVER = 'smtp.office365.com'
-# MAIL_PORT = '587'
-# MAIL_USE_TLS = True
-# # MAIL_USE_SSL = True
-# MAIL_USERNAME = 'ewen.liu@outlook.com'
-# MAIL_PASSWORD = 'hduewen1122!'
-# MAIL_DEFAULT_SENDER = 'ewen.liu@outlook.com'
-
 
 MAIL_SERVER = 'smtp.163.com'
 MAIL_PORT = '465'
@@ -63,3 +52,10 @@ PER_PAGE = 10
 # celery 相关配置
 CELERY_RESULT_BACKEND = 'redis://:111111@10.140.14.105:6379/0'
 CELERY_BROKER_URL = 'redis://:111111@10.140.14.105:6379/0'
+
+
+# 腾讯云对象存储相关配置
+TENCENT_CLOUD_SECRET_ID = 'XXX'  # 替换为用户的 secretId
+TENCENT_CLOUD_SECRET_KEY = 'XXX'  # 替换为用户的 secretKey
+TENCENT_CLOUD_REGION = 'ap-shanghai'
+TENCENT_CLOUD_BUCKET = 'flask-blog-1259649563'
