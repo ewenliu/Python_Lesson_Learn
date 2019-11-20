@@ -41,6 +41,9 @@
                         {#                    下面这个span提供给js读取是否登陆#}
                         <span id="login-tag" data-is-login="1" style="display: none"></span>
                         {#                        <li><a href="">{{ g.front_user.username }}</a></li>#}
+                        <li>
+                            <a href="{{ url_for("front.apost") }}" class="btn ">New Post</a>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -74,7 +77,7 @@
 {#      <li><a href="../about/">关于</a></li>#}
     </ul>
       <p>A websit powered by Flask & Uwsgi & Nginx</p>
-      <p>Contact: ewen.liu@outlook.com </p>
+      <p>Contact: ewen.liu@outlook.com  浙ICP备19047333号</p>
   </div>
 </footer>
 </body>

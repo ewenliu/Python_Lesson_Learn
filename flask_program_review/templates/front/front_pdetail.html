@@ -30,9 +30,9 @@
             <ul class="comment-list-group">
                 {% for comment in post.comments %}
                     <li>
-                        <div class="avatar-group">
-                            <img src="{{ comment.author.avatar or static(filename="common/images/xiaobai.jpg")  }}" alt="">
-                        </div>
+{#                        <div class="avatar-group">#}
+{#                            <img src="{{ comment.author.avatar or static(filename="common/images/xiaobai.jpg")  }}" alt="">#}
+{#                        </div>#}
                         <div class="comment-content">
                             <p class="author-info">
                                 <span>{{ comment.author.username }}</span>
