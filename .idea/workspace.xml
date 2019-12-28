@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="818662cb-e03d-4024-8404-76061cf02159" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Python_lesson_learn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python_lesson_learn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +14,19 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -24,137 +36,26 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>]</find>
-      <find>post</find>
-      <find>password</find>
-      <find>deleteModal</find>
-      <find>exampleModal</find>
-      <find>email</find>
-      <find>reset_token</find>
-      <find>@app.route</find>
-      <find>db</find>
-      <find>app</find>
-      <find>media content-section</find>
-      <find>content-section</find>
-      <find>container</find>
-      <find>col-md-8</find>
-      <find>site-header</find>
-      <find>navbar-brand</find>
-      <find>collapse</find>
-      <find>navbar</find>
-      <find>nav-item</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>title</replace>
-      <replace>content</replace>
-      <replace>deleteModal</replace>
-      <replace>password</replace>
-      <replace>@users.route</replace>
-      <replace>@posts.route</replace>
-      <replace>@main.route</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/models.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/flaskblog.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/flaskblog/models.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/run.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson5_PackageStructure/flaskblog/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/models.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/templates/layout.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/templates/account.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson6_UserAuth/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/templates/account.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/layout.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/home.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/create_post.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/post.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/user_post.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/post.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/home.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/user_posts.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/models.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/reset_request.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/reset_token.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/login.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/main/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/forms.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/main/routes.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/config.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/__init__.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/utils.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/models.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/11_Configuration/run.py" />
-        <option value="$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/templates/layout.html" />
-        <option value="$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/static/main.css" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
+  <component name="ProjectId" id="1Ue6uIVi28OeswKznNiImDKBw0a" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Python_Lesson_Learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_Lesson_Learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_Lesson_Learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_Lesson_Learn" type="462c0819:PsiDirectoryNode" />
-              <item name="Yiwen_Program" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle&#10;mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Yiwen_Program/my_flask_blog" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../seckilling-master/seckilling-master" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -165,19 +66,7 @@
       <recent name="E:\Python_lesson_learn\Flask_Blog\templates" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.thread_commu_queue">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,11 +130,92 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="multi_thread_with_lock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_lesson_learn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multithread" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multithread/multi_thread_with_lock.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="multi_thread_without_lock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_lesson_learn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multithread" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multithread/multi_thread_without_lock.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="thread_commu_queue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python_lesson_learn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multithread" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multithread/thread_commu_queue.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.thread_commu_queue" />
+        <item itemvalue="Python.multi_thread_with_lock" />
+        <item itemvalue="Python.multi_thread_without_lock" />
         <item itemvalue="Python.flaskblog" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -259,56 +229,10 @@
       <updated>1554620946192</updated>
       <workItem from="1560411285351" duration="114000" />
       <workItem from="1560411943114" duration="28000" />
+      <workItem from="1575704936157" duration="21597000" />
+      <workItem from="1577360681728" duration="87000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1096" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120469086" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.78396434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.29077616" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21266541" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3959505" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.29077616" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -316,144 +240,73 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/run.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/templates/register.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/forms.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/templates/account.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson7_AccoutSetting/flaskblog/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/about.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/forms.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/layout.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/run.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/create_post.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/home.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/templates/post.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson8_Posts/flaskblog/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/run.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/models.py" />
-    <entry file="file://C:/Python37/Lib/site-packages/werkzeug/routing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="718" selection-start-line="718" selection-end-line="718" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/post.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/home.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/Lesson9_Pagination/flaskblog/templates/user_posts.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/reset_request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/reset_token.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="166" column="46" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/forms.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/forms.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/main/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/10_AccountReset/flaskblog/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/forms.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/posts/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/main/routes.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/users/utils.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/models.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/config.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/flaskblog/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/11_Configuration/run.py" />
-    <entry file="file://D:/userdata/keviliu/Downloads/HPS register map/hpshtml_s10/hpshtml_s10/oxygen-webhelp/resources/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/flaskblog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/static/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Flask_Blog/2_BasicWebsite/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575705775720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575705775720" />
+    <state x="792" y="156" key="CommitChangelistDialog2" timestamp="1575877319347">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="594" y="116" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575705192432" />
+    <state x="792" y="156" key="CommitChangelistDialog2/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575877319347" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1577360765203">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1577360765203" />
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575712281997" />
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575712281997" />
+    <state width="2517" height="232" key="GridCell.Tab.0.center/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575712281997" />
+    <state width="2517" height="232" key="GridCell.Tab.0.left/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575712281997" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.1.bottom" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575712280904" />
+    <state width="2517" height="232" key="GridCell.Tab.1.bottom/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.1.center" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575712280904" />
+    <state width="2517" height="232" key="GridCell.Tab.1.center/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.1.left" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575712280904" />
+    <state width="2517" height="232" key="GridCell.Tab.1.left/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state width="2517" height="232" key="GridCell.Tab.1.right" timestamp="1575896370906">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575712280904" />
+    <state width="2517" height="232" key="GridCell.Tab.1.right/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575896370906" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1575705055212">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1575705055212" />
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1575882659856">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/2560.0.1920.1050/0.0.2560.1410@0.0.2560.1410" timestamp="1575882659856" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Python_Lesson_Learn$multi_thread_without_lock.coverage" NAME="multi_thread_without_lock Coverage Results" MODIFIED="1575708257722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multithread" />
+    <SUITE FILE_PATH="coverage/Python_Lesson_Learn$multi_thread_with_lock.coverage" NAME="multi_thread_with_lock Coverage Results" MODIFIED="1575708390739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multithread" />
+    <SUITE FILE_PATH="coverage/Python_Lesson_Learn$thread_commu_queue.coverage" NAME="thread_commu_queue Coverage Results" MODIFIED="1575712279857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multithread" />
   </component>
   <component name="masterDetails">
     <states>
