@@ -32,7 +32,7 @@ importlib-metadata==0.23
 isort==4.3.17
 itchat==1.3.10
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 kombu==4.6.6
 lazy-object-proxy==1.3.1
 lxml==4.3.0
