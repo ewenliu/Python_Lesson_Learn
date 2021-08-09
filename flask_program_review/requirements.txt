@@ -62,7 +62,7 @@ python-dateutil==2.8.0
 python-editor==1.0.4
 python-memcached==1.59
 pytz==2019.3
-pywin32==224
+pywin32==301
 qiniu==7.2.6
 redis==3.3.11
 requests==2.21.0
