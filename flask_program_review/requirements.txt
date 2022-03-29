@@ -42,7 +42,7 @@ mccabe==0.6.1
 monotonic==1.5
 more-itertools==7.2.0
 mysqlclient==1.4.2
-paramiko==2.4.2
+paramiko==2.10.1
 pep8==1.7.1
 Pillow==6.0.0
 ply==3.11
